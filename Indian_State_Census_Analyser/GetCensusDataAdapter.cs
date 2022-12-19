@@ -13,11 +13,11 @@ namespace Indian_State_Census_Analyser
         {
             try
             {
+                string[] data;
                 if (!Path.GetExtension(filePath).Equals(".csv"))
                 {
                     throw new StateCensusAnalyserException(StateCensusAnalyserException.ExceptionType.INVALID_FILE_TYPE, "Invalid file extension");
                 }
-                string[] data;
                 if (!File.Exists(filePath))
                 {
                     throw new StateCensusAnalyserException(StateCensusAnalyserException.ExceptionType.FILE_NOT_FOUND, "File not found");
